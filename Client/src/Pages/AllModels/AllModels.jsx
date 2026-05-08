@@ -17,7 +17,7 @@ const AllModels = () => {
     .then(res=> res.json())
     .then(data=> {
       console.log(data)
-      setModels(data)
+      setModels(Array.isArray(data) ? data : [])
       setLoading(false)
     })
   }
@@ -55,11 +55,19 @@ const AllModels = () => {
       <button className="btn btn-secondary  rounded-full">{loading ? "Searching...." : "Search"}</button>
      </form>
 
-      <div className="grid grid-cols-3 lg:grid-cols-4 gap-3">
-        {models.map((model) => (
-          <ModelCard key={model._id} model={model} />
-        ))}
-      </div>
+      {(!models || models.length === 0) && !loading ? (
+        <div className="text-center py-20 w-full col-span-full">
+          <h2 className="text-3xl font-bold text-gray-500">No models found</h2>
+          <p className="text-gray-400 mt-2">Try searching with a different keyword.</p>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {models?.map((model) => (
+            <ModelCard key={model._id} model={model} />
+          ))}
+        </div>
+      )}
+
     </div>
   );
 };

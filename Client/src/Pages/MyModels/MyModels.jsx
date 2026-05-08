@@ -7,7 +7,6 @@ const MyModels = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(()=> {
-
         fetch(`http://localhost:3000/my-models?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${user?.accessToken}`
@@ -15,11 +14,9 @@ const MyModels = () => {
         })
         .then(res=> res.json())
         .then(data=> {
-            
-            setModels(data)
+            setModels(Array.isArray(data) ? data : [])
             setLoading(false)
         })
-
     }, [user])
 
 

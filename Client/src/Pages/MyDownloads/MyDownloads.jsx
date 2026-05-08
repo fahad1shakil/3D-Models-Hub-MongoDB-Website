@@ -15,7 +15,7 @@ const MyDownloads = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        setModels(data);
+        setModels(Array.isArray(data) ? data : []);
         setLoading(false);
       });
   }, [user]);

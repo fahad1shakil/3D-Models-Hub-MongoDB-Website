@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+Server/node_modules/
+Client/node_modules/
+
+# Environment Variables
+.env
+Server/.env
+
+# Secrets
+firebase-adminion.json
+Server/firebase-adminion.json
+
+# Build outputs
+dist/
+build/
+.vercel/
+
+# IDE
+.vscode/
+.idea/
+*.log

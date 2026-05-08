@@ -26,9 +26,15 @@ const UpdateModel = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        toast.success("Successfully updated!");
-        navigate(`/model-details/${model._id}`);
+        if (data.modifiedCount > 0 || data.matchedCount > 0) {
+          Swal.fire({
+            title: "Success!",
+            text: "Successfully updated!",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
+          navigate(`/model-details/${model._id}`);
+        }
       })
       .catch((err) => {
         console.log(err);
