@@ -2,7 +2,7 @@ Linkdin post link :   [# 3D-Models-Hub-Website-](https://www.linkedin.com/posts/
 
 🚀 Excited to share my newly completed project: 3D Models Hub! 🚀I recently built 3D Models Hub, a dynamic full-stack web application designed to explore, add, and manage an extensive collection of 3D assets. Whether you're looking for vehicles, weapons, environments, or props, this platform brings everything together in one place. 💡 
 
-🖇️Live Link : https://lnkd.in/gAsNAZHd
+🖇️Live Link : [https://lnkd.in/gAsNAZHd](https://fanciful-pastelito-8f8c67.netlify.app/)
 
 Key Features:
 Diverse Model Collection: Users can seamlessly browse through various 3D models like the "Cyberpunk Hovercar", "Mecha Combat Robot", and "Sci-Fi Cargo Crate" across multiple categories. 
